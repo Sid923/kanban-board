@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import KanbanBoard from "./KanbanBoard";
 import Header from "./Header";
-import axios from "axios";
-
-import './App.css'; // Create a CSS file for styling
+import apiData from './data.js'; // Import the local data file
+import './App.css'; // Ensure this file contains your styling
 
 const App = () => {
   const [tickets, setTickets] = useState([]);
@@ -11,12 +10,8 @@ const App = () => {
   const [ordering, setOrdering] = useState("priority");
 
   useEffect(() => {
-    // Fetch tickets
-    axios.get("https://api.quicksell.co/v1/internal/frontend-assignment")
-      .then((response) => {
-        setTickets(response.data.tickets);
-      })
-      .catch((error) => console.error("Error fetching data:", error));
+    // Use local data file instead of API call
+    setTickets(apiData.tickets);
   }, []);
 
   return (
@@ -32,4 +27,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App;
