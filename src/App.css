@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.app {
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.kanban-board {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+
+
+
+
+/* Updated card styling for spacing */
+.card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem; /* Add spacing between cards */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Add hover effect for cards */
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Group column styling */
+.group {
+  background: #fff;
+  border-radius: 5px;
+  padding: 1rem;
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Spacing between cards and header */
+}
+
+/* Header container */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  gap: 1rem;
+}
+
+/* Dropdown container */
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Icon and label container */
+.dropdown-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Icon styling */
+.icon {
+  width: 20px; /* Adjust icon size */
+  height: 20px;
+  display: block;
+}
+
+/* Select tag styling */
+select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+select:hover {
+  border-color: #888;
+  background-color: #f9f9f9;
+}
+
+select:focus {
+  border-color: #007BFF; /* Highlight border color */
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
